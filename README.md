@@ -45,16 +45,16 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
   <img src="Screenshot 2024-04-27 182333.png" alt="Homepage Screenshot" width="800"/>
 </p>
 
-### 🔹 Projects Section
+### 🔹 About Us
 
 <p align="center">
-  <img src="screenshots/projects.png" alt="Projects Section Screenshot" width="800"/>
+  <img src="Screenshot 2024-04-27 182348.png" alt="Projects Section Screenshot" width="800"/>
 </p>
 
-### 🔹 Contact Form
+### 🔹 Skills
 
 <p align="center">
-  <img src="screenshots/contact.png" alt="Contact Section Screenshot" width="800"/>
+  <img src="Screenshot 2024-04-27 182400.png" alt="Contact Section Screenshot" width="800"/>
 </p>
 
 ---
