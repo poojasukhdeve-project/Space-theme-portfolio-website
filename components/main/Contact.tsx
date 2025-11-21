@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const Contact: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center mx-auto max-w-4xl px-4 my-10">
@@ -71,11 +73,14 @@ const Contact: React.FC = () => {
         {/* Image Container */}
         <div className="w-full md:w-1/2 p-4">
           <Image
-            src="/contactus.png"
+            // prefix with BASE so it resolves correctly on GitHub Pages
+            src={`${BASE}/contactus.png`}
             alt="Contact Us"
             width={500}
             height={400}
             className="max-w-full h-auto rounded shadow"
+            unoptimized
+            priority
           />
         </div>
       </div>

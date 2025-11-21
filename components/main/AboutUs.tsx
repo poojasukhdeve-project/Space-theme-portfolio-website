@@ -2,24 +2,28 @@ import React from "react";
 import Image from "next/image";
 import "../sub/AboutUs.css";
 
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const AboutUs: React.FC = () => {
   return (
     <div className="about-container">
       <div className="content-container">
-        <video autoPlay muted loop id="background-video">
-          <source src="/galaxy1.mp4" type="video/mp4" />
+        {/* Video: prefix with BASE so it works on GitHub Pages */}
+        <video autoPlay muted loop id="background-video" playsInline>
+          <source src={`${BASE}/galaxy1.mp4`} type="video/mp4" />
           Your browser does not support HTML5 video.
         </video>
 
         <div className="image-container">
-          {/* Using next/image for automatic optimization.
-              Adjust width/height to match your actual image dimensions. */}
+          {/* next/image with unoptimized to be compatible with static export */}
           <Image
-            src="/Astronaut1.png"
+            src={`${BASE}/Astronaut1.png`}
             alt="About Us"
             width={400}
             height={400}
             className="about-image"
+            unoptimized
+            priority
           />
         </div>
 

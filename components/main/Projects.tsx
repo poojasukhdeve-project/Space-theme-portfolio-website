@@ -1,6 +1,9 @@
 import React from "react";
 import ProjectCard from "../sub/ProjectCard";
 
+// Prefix for GitHub Pages (e.g. /Space-theme-portfolio-website)
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const Projects = () => {
   return (
     <div
@@ -10,29 +13,32 @@ const Projects = () => {
       <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-20">
         My Projects
       </h1>
+
       <div className="h-full w-full flex flex-col md:flex-row gap-10 px-10">
         <ProjectCard
-          src="/Project1.png"
+          src={`${BASE}/Project1.png`}
           title="Flag Quiz App"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
+
         <ProjectCard
-          src="/Project2.png"
+          src={`${BASE}/Project2.png`}
           title="Tech Zenesis Website"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
+
         <ProjectCard
-          src="/Project3.png"
+          src={`${BASE}/Project3.png`}
           title="Space Website"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
+
         <ProjectCard
-          src="/Project4.png"
+          src={`${BASE}/Project4.png`}
           title="Data Analysis Unicorn"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         />
       </div>
-      
     </div>
   );
 };
